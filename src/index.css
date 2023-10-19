@@ -118,16 +118,16 @@ a .back_link:hover {
   margin-right: 0.6rem;
   vertical-align: middle;
 }
-.info_container{
-padding-left: 6rem;
-flex-basis: 60%;
+.info_container {
+  padding-left: 6rem;
+  flex-basis: 60%;
 }
 
 .country_detail {
   margin-top: 4rem;
   padding: 0 12rem;
 }
-.country_info{
+.country_info {
   padding: 1.5rem 0 3rem 0;
   justify-content: space-between;
 }
@@ -137,8 +137,7 @@ flex-basis: 60%;
   height: 26rem;
 }
 
-
-.country_name{
+.country_name {
   padding-left: 2rem;
   padding-top: 2rem;
 }
@@ -163,7 +162,7 @@ flex-basis: 60%;
   outline: none;
   display: inline-block;
   padding: 0.4rem 1rem;
-  margin-left:6px ;
+  margin-left: 6px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 4px;
   color: var(--light-mode-text);
@@ -237,28 +236,28 @@ flex-basis: 60%;
   color: var(--dark-mode-text);
 }
 
-@media only screen and (max-width: 1440px) and(min-width:900px){
+@media only screen and (max-width: 1440px) and(min-width:900px) {
   .country_detail {
     padding: 0 6rem;
   }
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px) {
   .country_detail {
     padding: 0 2rem;
     flex-direction: column;
   }
   .img img {
     width: 100%;
-    
+
     height: auto;
   }
-.info_container{
-  padding: unset;
-}
-.country_name{
-  padding-right: 2rem;
-}
+  .info_container {
+    padding: unset;
+  }
+  .country_name {
+    padding-right: 2rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -271,10 +270,15 @@ flex-basis: 60%;
   .search_filter_bar .w-25 {
     width: 50% !important;
   }
-  .country_info{
+  .search_filter_bar .w-50 .w-25 {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .country_info {
     flex-direction: column;
   }
-  .right_info{
+  .right_info {
     padding-top: 2rem;
   }
 }

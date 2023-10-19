@@ -17,7 +17,7 @@ const Sort = ({ setSort, setOrder }) => {
   };
 
   return (
-    <div className="form-group w-25 d-flex w-50">
+    <div className="form-group w-25 d-flex">
       <select
         onChange={HandleSortChange}
         className="form-control"
