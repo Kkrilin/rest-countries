@@ -281,4 +281,8 @@ a .back_link:hover {
   .right_info {
     padding-top: 2rem;
   }
+  .country_name{
+    padding: unset;
+    padding-top: 2rem;
+  }
 }
