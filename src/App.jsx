@@ -15,11 +15,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 export const ThemeContext = createContext();
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [darkmode, setDarkMode] = useState(false);
 
   return (
     <BrowserRouter>
-    <ThemeContext.Provider value={{ mode, setMode }}>
+    <ThemeContext.Provider value={{ darkmode, setDarkMode }}>
         <Header />
       </ThemeContext.Provider>
       <Routes>

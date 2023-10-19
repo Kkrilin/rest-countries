@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const CountryCard = ({ country }) => {
   return (
-    <Link to={`/country/${country.ccn3}`}>
+    <Link to={`/country/${country.cca3}`}>
       <div className="card m-4" style={{ width: "18rem" }}>
         <img
           className="card-img-top"

@@ -2,18 +2,15 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../App";
 
 const Header = () => {
-  const { mode, setMode } = useContext(ThemeContext);
+  const { darkmode, setDarkMode } = useContext(ThemeContext);
 
-  const HandleModeClick = (e) => {
-    if (e.target.dataset.mode === "dark") {
-      console.log();
-      setMode("dark");
-      document.querySelector("body").classList.add("dark");
-      document.querySelector("body").classList.remove("light");
-    } else if (e.target.dataset.mode === "light") {
-      setMode("light");
-      document.querySelector("body").classList.add("light");
+  const HandleModeClick = () => {
+    if (darkmode) {
+      setDarkMode(false);
       document.querySelector("body").classList.remove("dark");
+    } else {
+      setDarkMode(true);
+      document.querySelector("body").classList.add("dark");
     }
   };
   return (
@@ -23,19 +20,15 @@ const Header = () => {
         onClick={HandleModeClick}
         className="mode d-flex align-items-center px-2"
       >
-        {mode === "light" ? (
+        {darkmode ? (
           <>
-            <i className="bi bi-moon-stars-fill px-2"></i>
-            <p className="px-2" data-mode="dark">
-              Dark Mode
-            </p>
+            <i className="bi bi-brightness-high-fill px-2"></i>
+            <p className="px-2">Light Mode</p>
           </>
         ) : (
           <>
-            <i className="bi bi-brightness-high-fill px-2"></i>
-            <p className="px-2" data-mode="light">
-              Light Mode
-            </p>
+            <i className="bi bi-moon-stars-fill px-2"></i>
+            <p className="px-2">Dark Mode</p>
           </>
         )}
       </div>

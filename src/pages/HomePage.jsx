@@ -1,10 +1,11 @@
 import { useEffect, useState, createContext } from "react";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import Filter from "../components/Filter";
 import CountryCard from "../cards/CountryCard";
 import Loading from "../components/Loading";
 import Sort from "../components/Sort";
+import Favicon from "react-favicon";
 // import "bootstrap/dist/css/bootstrap.css";
 
 // export const ThemeContext = createContext();
@@ -68,6 +69,7 @@ function HomePage() {
       .then((data) => {
         setCountries(data);
         setDataLoaded(true);
+        document.title = "Where in the world"
       })
       .catch((error) => {
         setMessage(error.message);
@@ -78,6 +80,7 @@ function HomePage() {
       {/* <ThemeContext.Provider value={{ mode, setMode }}>
         <Header />
       </ThemeContext.Provider> */}
+      <Favicon url='https://img.freepik.com/premium-vector/globe-icon-vector-illustration-white-map-continents-world_721440-784.jpg'/>
       <div className="search_filter_bar p-4 filter-container d-flex justify-content-between">
         <div className="w-50">
           <SearchBar setSearch={setSearch} />
